@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <section class="container">
+        <div class="">
+            <h2 class="title-page">Комментарии</h2>
+            <ul class="container-comments"></ul>
+        </div>
+        <div class="container-pagination">
+            <ul class="pagination-list">
+                <!-- <li class="pagination-list-item"><button>1</button></li> -->
+            </ul>
+        </div>
+        <div class="add-more disabled"><button type="submit" id="button-more" class="load-btn">Показать еще</button>
+        </div>
+        <div>
+            <h2>Оставьте ваш комментарий</h2>
+            <form action="https://jordan.ashton.fashion/api/goods/30/comments" method="post" class="container-form">
+                <label for="name" class="label-title">Имя</label>
+                <input type="text" name="name" id="name" required placeholder="Введите ваше имя">
+
+                <label for="comment" class="label-title">Комментарий</label>
+                <textarea required placeholder="Оставьте комментарий" name="comment" id="comment" rows="10"></textarea>
+
+                <input type="submit" id="button" class="load-btn" value="Опубликовать" required>
+            </form>
+        </div>
+    </section>
+
+    <!-- <script src="./index.js"></script> -->
+</body>
+
+</html>

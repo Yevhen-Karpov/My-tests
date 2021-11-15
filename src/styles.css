@@ -1,0 +1,60 @@
+.container-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#name {
+  width: 480px;
+  padding: 4px 10px;
+  margin-bottom: 16px;
+}
+#comment {
+  width: 480px;
+  padding: 4px 10px;
+}
+.label-title {
+  align-self: start;
+  margin-left: 400px;
+  margin-bottom: 8px;
+}
+#comment::placeholder {
+  font-size: 14px;
+}
+h2 {
+  text-align: center;
+}
+.comment-item {
+  border: 1px solid #212121;
+  list-style: none;
+  margin-bottom: 2px;
+  padding: 4px 4px;
+  min-width: 1024px;
+  height: auto;
+}
+.container {
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.pagination-list {
+  display: flex;
+  /* justify-content: space-between; */
+  list-style: none;
+}
+.container-pagination {
+  margin-top: 16px;
+}
+.load-btn {
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  background-color: rgb(63, 99, 197);
+  color: bisque;
+  cursor: pointer;
+}
+.load-btn {
+  display: flex;
+  margin: auto;
+  margin-top: 16px;
+}
