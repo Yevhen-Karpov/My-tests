@@ -6,7 +6,7 @@ export default class ApiService {
   fetchGetComments() {
     return fetch(`${BASE_URL}?page=${this.page}`)
       .then(result => {
-        this.page += 1;
+        // this.page += 1;
         return result.json();
       })
       .catch();
@@ -39,5 +39,33 @@ export default class ApiService {
   }
   resetPage() {
     this.page = 1;
+  }
+  getPage() {
+    return this.page;
+  }
+  //   set page(value) {
+  //     return (this.page = value);
+  //   }
+  getTotalPages() {
+    return this.pages;
+  }
+  set totalPages(pgs) {
+    this.pages = Number(pgs);
+  }
+  incrementPage() {
+    if (this.page === this.pages) {
+      return;
+    }
+    this.page += 1;
+  }
+  decrementPage() {
+    if (this.page === 1) {
+      return;
+    }
+    this.page -= 1;
+  }
+
+  currentPage() {
+    return this.page;
   }
 }

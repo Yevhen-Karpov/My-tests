@@ -1,5 +1,5 @@
 import commentPage from './template/commentPage.hbs';
-// import allPages from './template/allPages.hbs';
+import allPages from './template/allPage.hbs';
 import './styles.css';
 import ApiService from './apiService';
 import refs from './refs';
@@ -29,12 +29,14 @@ function postComment(e) {
 }
 function getComment() {
   containerComments.innerHTML = '';
+
   apiService.fetchGetComments().then(elem => {
     console.log(elem.current_page);
+    //
+    console.log(elem);
     containerComments.insertAdjacentHTML('beforeend', commentPage(elem.data));
-    // if (paginationList.innerHTML == "") {
-    //   paginationList.insertAdjacentHTML("beforeend", allPages(elem));
-    // }
+
+    apiService.incrementPage();
   });
   addMore.classList.remove('disabled');
 }
@@ -42,7 +44,14 @@ if (containerComments.innerHTML === '') {
   getComment();
 }
 // for (let item of paginationListItem) {
-//   containerComments.innerHTML = "";
-//   item.addEventListener("click", getComment);
+//   containerComments.innerHTML = '';
+//   item.addEventListener('click', getComment);
 // }
-// function pagination() {}
+function pagination() {
+  apiService.fetchAllComments().then(res => {
+    console.log(res.per_page);
+
+    paginationList.insertAdjacentHTML('beforeend', allPages(res));
+  });
+}
+pagination();
