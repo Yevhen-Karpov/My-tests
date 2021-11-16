@@ -6,6 +6,7 @@ import refs from './refs';
 
 const apiService = new ApiService();
 const {
+  titlePage,
   containerComments,
   postBtn,
   addMore,
@@ -31,22 +32,13 @@ function getComment() {
   containerComments.innerHTML = '';
 
   apiService.fetchGetComments().then(elem => {
-    console.log(elem.current_page);
-    //
-    console.log(elem);
     containerComments.insertAdjacentHTML('beforeend', commentPage(elem.data));
 
     apiService.incrementPage();
   });
   addMore.classList.remove('disabled');
 }
-if (containerComments.innerHTML === '') {
-  getComment();
-}
-// for (let item of paginationListItem) {
-//   containerComments.innerHTML = '';
-//   item.addEventListener('click', getComment);
-// }
+titlePage.addEventListener('click', getComment);
 function pagination() {
   apiService.fetchAllComments().then(res => {
     console.log(res.per_page);
@@ -54,4 +46,4 @@ function pagination() {
     paginationList.insertAdjacentHTML('beforeend', allPages(res));
   });
 }
-pagination();
+// pagination();

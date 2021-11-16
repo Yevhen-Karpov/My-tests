@@ -1,3 +1,6 @@
+.title-page {
+  cursor: pointer;
+}
 .container-form {
   display: flex;
   flex-direction: column;
@@ -48,13 +51,16 @@ h2 {
   padding: 8px 12px;
   border-radius: 8px;
   outline: none;
-  border: none;
-  background-color: rgb(63, 99, 197);
-  color: bisque;
+  border: 1px solid #212121;
+  background-color: #ffffff;
+  color: black;
   cursor: pointer;
 }
 .load-btn {
   display: flex;
   margin: auto;
   margin-top: 16px;
+}
+.disabled {
+  display: none;
 }
