@@ -11,14 +11,15 @@
 </head>
 
 <body>
-    <section class="container">
-        <div class="">
+    <!-- <section class="container"> -->
+
+    <!-- <div class="">
             <h2 class="title-page">Показать комментарии</h2>
             <ul class="container-comments"></ul>
         </div>
         <div class="container-pagination">
             <ul class="pagination-list">
-                <!-- <li class="pagination-list-item"><button>1</button></li> -->
+                
             </ul>
         </div>
         <div class="add-more disabled"><button type="submit" id="button-more" class="load-btn">Показать еще</button>
@@ -34,10 +35,21 @@
 
                 <input type="submit" id="button" class="load-btn" value="Опубликовать" required>
             </form>
-        </div>
-    </section>
+        </div> -->
 
-    <!-- <script src="./index.js"></script> -->
+    <!-- </section> -->
+    <input type="text" id="input" />
+    <select id="inputOptions" onchange="change()">
+        <option>meter</option>
+        <option>cm</option>
+    </select>
+
+    <input type="text" readonly id="result" id="result" />
+    <select id="resultOptions" onchange="change()">
+        <option>meter</option>
+        <option>cm</option>
+    </select>
+    <include src="./partials/task2.html"></include>
 </body>
 
 </html>

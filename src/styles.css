@@ -1,4 +1,49 @@
-.title-page {
+root,
+body {
+  font: 400 3vw/1.5 Consolas, monospace;
+}
+
+fieldset fieldset {
+  min-height: 20vh;
+}
+
+input,
+output {
+  width: 10ch;
+  margin-right: 5px;
+  margin-bottom: 8px;
+  font: inherit;
+  text-align: right;
+}
+
+#aWt {
+  display: inline-block;
+}
+
+[type='reset'] {
+  text-align: center;
+}
+
+.switch {
+  padding: 3px 5px;
+}
+
+[type='reset']:hover,
+.switch:hover {
+  color: tomato;
+  background: rgba(56, 87, 199, 0.4);
+  cursor: pointer;
+}
+
+[name='conv'],
+.mask {
+  display: none;
+}
+
+[name='conv']:checked + fieldset .mask {
+  display: inline-block;
+}
+/* .title-page {
   cursor: pointer;
 }
 .container-form {
@@ -40,7 +85,7 @@ h2 {
 }
 .pagination-list {
   display: flex;
-  /* justify-content: space-between; */
+  
   list-style: none;
 }
 .container-pagination {
@@ -63,4 +108,4 @@ h2 {
 }
 .disabled {
   display: none;
-}
+} */

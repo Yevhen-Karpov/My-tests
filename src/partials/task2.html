@@ -1,0 +1,34 @@
+<form id='convPpmG'>
+    <fieldset>
+        <legend>PPM / Grav Convertor</legend>
+        <label>Assay Weight</label>
+        <input id="aWt" type="number" min='0' value="0">
+        <input type='reset'>
+        <br>
+
+        <input id='ppmToGrav' name='conv' type='radio'>
+        <fieldset>
+            <legend>
+                <label for='ppmToGrav' class='switch'>PPM to Grav</label>
+            </legend>
+            <label class='mask'>
+                PPM: <input id="pPM" type="number" min='0' value="0">
+                to Grav: <output id='pToG'>0</output> mg
+            </label>
+        </fieldset>
+
+        <hr>
+
+        <input id='gravToPPM' name='conv' type='radio'>
+        <fieldset>
+            <legend>
+                <label for='gravToPPM' class='switch'>Grav to PPM</label>
+            </legend>
+            <label class='mask'>
+                Grav: <input id="grv" type="number" min='0' value="0">
+                mg to PPM: <output id='gToP'>0</output>
+            </label>
+        </fieldset>
+
+    </fieldset>
+</form>
