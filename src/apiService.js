@@ -3,19 +3,19 @@ export default class ApiService {
   constructor() {
     this.page = 1;
   }
-  fetchGetComments() {
-    return fetch(`${BASE_URL}?page=${this.page}`)
-      .then(result => {
-        // this.page += 1;
-        return result.json();
-      })
-      .catch();
+  async fetchGetComments() {
+    const result = await fetch(`${BASE_URL}?page=${this.page}`);
+    return await result.json();
   }
-  fetchPostComments() {
-    const newComment = {
-      name: inputName.value,
-      text: inputText.value,
-    };
+  async fetchGetPage(value) {
+    const result = await fetch(`${BASE_URL}?page=${value}`);
+    return await result.json();
+  }
+  async fetchPostComments(newComment) {
+    // const newComment = {
+    //   name: inputName.value,
+    //   text: inputText.value,
+    // };
     const options = {
       method: 'POST',
       headers: {
@@ -24,18 +24,12 @@ export default class ApiService {
       body: JSON.stringify(newComment),
     };
 
-    return fetch(`${BASE_URL}`, options)
-      .then(res => {
-        return res.json();
-      })
-      .catch();
+    const res = await fetch(`${BASE_URL}`, options);
+    return await res.json();
   }
-  fetchAllComments() {
-    return fetch(`${BASE_URL}`)
-      .then(res => {
-        return res.json();
-      })
-      .catch();
+  async fetchAllComments() {
+    const res = await fetch(`${BASE_URL}`);
+    return await res.json();
   }
   resetPage() {
     this.page = 1;
@@ -43,15 +37,15 @@ export default class ApiService {
   getPage() {
     return this.page;
   }
-  //   set page(value) {
-  //     return (this.page = value);
-  //   }
+  setPage(value) {
+    return (this.page = value);
+  }
   getTotalPages() {
     return this.pages;
   }
-  set totalPages(pgs) {
-    this.pages = Number(pgs);
-  }
+  // set totalPages(pgs) {
+  //   this.pages = Number(pgs);
+  // }
   incrementPage() {
     if (this.page === this.pages) {
       return;

@@ -1,49 +1,50 @@
-root,
+/* root,
 body {
   font: 400 3vw/1.5 Consolas, monospace;
-}
+} */
 
-fieldset fieldset {
+/* fieldset fieldset {
   min-height: 20vh;
-}
+} */
 
-input,
+/* input,
 output {
   width: 10ch;
   margin-right: 5px;
   margin-bottom: 8px;
   font: inherit;
   text-align: right;
-}
+} */
 
-#aWt {
+/* #aWt {
   display: inline-block;
-}
+} */
 
-[type='reset'] {
+/* [type='reset'] {
   text-align: center;
-}
-
+} */
+/* 
 .switch {
   padding: 3px 5px;
-}
+} */
 
-[type='reset']:hover,
+/* [type='reset']:hover,
 .switch:hover {
   color: tomato;
   background: rgba(56, 87, 199, 0.4);
   cursor: pointer;
-}
+} */
 
-[name='conv'],
+/* [name='conv'],
 .mask {
   display: none;
-}
+} */
 
-[name='conv']:checked + fieldset .mask {
+/* [name='conv']:checked + fieldset .mask {
   display: inline-block;
-}
-/* .title-page {
+} */
+
+.title-page {
   cursor: pointer;
 }
 .container-form {
@@ -61,8 +62,8 @@ output {
   padding: 4px 10px;
 }
 .label-title {
-  align-self: start;
-  margin-left: 400px;
+  align-self: center;
+  /* margin-left: 400px; */
   margin-bottom: 8px;
 }
 #comment::placeholder {
@@ -85,7 +86,7 @@ h2 {
 }
 .pagination-list {
   display: flex;
-  
+
   list-style: none;
 }
 .container-pagination {
@@ -106,6 +107,22 @@ h2 {
   margin: auto;
   margin-top: 16px;
 }
+
 .disabled {
   display: none;
-} */
+}
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Style the active class (and buttons on mouse-over) */
+.active,
+.btn:hover,
+.load-btn:hover {
+  background-color: rgb(82, 91, 105);
+  color: white;
+}

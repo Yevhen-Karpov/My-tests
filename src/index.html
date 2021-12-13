@@ -11,15 +11,15 @@
 </head>
 
 <body>
-    <!-- <section class="container"> -->
+    <section class="container">
 
-    <!-- <div class="">
+        <div class="">
             <h2 class="title-page">Показать комментарии</h2>
             <ul class="container-comments"></ul>
         </div>
         <div class="container-pagination">
             <ul class="pagination-list">
-                
+
             </ul>
         </div>
         <div class="add-more disabled"><button type="submit" id="button-more" class="load-btn">Показать еще</button>
@@ -27,18 +27,23 @@
         <div>
             <h2>Оставьте ваш комментарий</h2>
             <form action="https://jordan.ashton.fashion/api/goods/30/comments" method="post" class="container-form">
-                <label for="name" class="label-title">Имя</label>
-                <input type="text" name="name" id="name" required placeholder="Введите ваше имя">
+                <label class="label-title">Имя<br /><input type="text" required name="name" id="name"
+                        placeholder="Введите ваше имя"></label>
 
-                <label for="comment" class="label-title">Комментарий</label>
-                <textarea required placeholder="Оставьте комментарий" name="comment" id="comment" rows="10"></textarea>
+
+                <label class="label-title">Комментарий<br /><textarea required placeholder="Оставьте комментарий"
+                        name="comment" id="comment" rows="10"></textarea></label>
+
 
                 <input type="submit" id="button" class="load-btn" value="Опубликовать" required>
             </form>
-        </div> -->
+        </div>
 
-    <!-- </section> -->
-    <input type="text" id="input" />
+    </section>
+
+
+
+    <!-- <input type="text" id="input" />
     <select id="inputOptions" onchange="change()">
         <option>meter</option>
         <option>cm</option>
@@ -48,8 +53,8 @@
     <select id="resultOptions" onchange="change()">
         <option>meter</option>
         <option>cm</option>
-    </select>
-    <include src="./partials/task2.html"></include>
+    </select> -->
+    <!-- <include src="./partials/task2.html"></include> -->
 </body>
 
 </html>
